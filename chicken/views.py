@@ -34,6 +34,7 @@ def chicken(request):
     import random
 
     number = random.randint[0, 97]
+    menu = ''
 
     if number == 0:
         menu = "교촌 오리지날"

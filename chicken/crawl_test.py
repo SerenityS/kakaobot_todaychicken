@@ -1,6 +1,7 @@
 import random
 
 number = random.randint(0, 97)
+menu = ''
 
 print(number)
 
