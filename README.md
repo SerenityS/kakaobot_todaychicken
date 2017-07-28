@@ -23,9 +23,7 @@
 * Python + venv
 
 ### 필요 모듈
-* beautifulsoup4
-* urllib
-* lxml
+없음
 
 # 설치법
 ## 유의사항
@@ -43,9 +41,7 @@ sudo apt-get install python3 python3-pip python3-venv</pre>
 <pre><code>python3 -m venv myvenv
 source myvenv/bin/activate
 </code></pre>
-### 4. python 추가 요구 패키지 설치
-<code>pip install Django lxml beautifulsoup4 urlopen</code>
-### 5. 첫 마이그레이션 & 실행
+### 4. 첫 마이그레이션 & 실행
 <code>python3 manage.py migrate</code>
 
 <code>python3 manage.py runserver host-ip:8000</code>
@@ -58,7 +54,7 @@ Django version 1.11.3, using settings 'kakaobot.settings'
 Starting development server at http://host-ip:8000/
 Quit the server with CONTROL-C.</code></pre>
 여의치 않다면 127.0.0.1 루프백으로 두고 실행해서 테스트해도 된다.
-### 6. 동작 확인
+### 5. 동작 확인
 카카오톡 플러스친구 자동등답 API에선 http://host-ip:8000/keyboard/에 대한 반응을 필수로 요구한다.
 
 터미널에 <code>curl -XGET 'http://host-ip:8000/keyboard/'</code>를 입력해보자.
@@ -78,7 +74,7 @@ curl -XPOST 'http://host-ip:8000/message' -d '{ "user_key": "encryptedUserKey", 
 {"keyboard": {"type": "buttons", "buttons": ["\uc870\uc2dd", "\uc911\uc2dd", "\uc11d\uc2dd", "\ub0b4\uc77c\uc758 \uc870\uc2dd", "\ub0b4\uc77c\uc758 \uc911\uc2dd", "\ub0b4\uc77c\uc758 \uc11d\uc2dd"]}, "message": {"text": "07\uc6d4 19\uc77c \uc218\uc694\uc77c \uc911\uc2dd \uba54\ub274\uc785\ub2c8\ub2e4. \n \n\ub098\ubb3c\ube44\ube54\ubc25/\uc57d\uace0\ucd94\uc7a5\n\uac10\uc790\ub41c\uc7a5\uad6d\n\uc18c\uc13</pre>
 와 같이 반환됨을 확인함으로서 정상 작동함을 알 수 있다.
   
-### 8. 카카오톡 플러스 친구와 연동
+### 6. 카카오톡 플러스 친구와 연동
 타게시물들을 참조하도록 하자.
 
 ## 작동 화면
