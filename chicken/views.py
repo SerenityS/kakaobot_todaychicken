@@ -24,8 +24,12 @@ def message(request):
 
     return JsonResponse({
         'message': {
-            'text': today_date + '오늘의 치킨 메뉴입니다. \n\n' + chicken(request)
+            'text': today_date + '오늘의 추천 치킨 메뉴입니다. \n\n' + chicken(request)
         },
+        'keyboard': {
+            'type': 'buttons',
+            'buttons': ['오늘의 치킨']
+        }
     })
 
 
